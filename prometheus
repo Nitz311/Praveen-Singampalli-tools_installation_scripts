@@ -1,4 +1,6 @@
-# Install using Helm
+#install minikube first
+
+# Install prometheus using Helm
 
 ## Add helm repo
 
