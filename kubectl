@@ -1,0 +1,8 @@
+curl -LO https://storage.googleapis.com/kubernetes-release/release/v1.23.6/bin/linux/amd64/kubectl
+chmod +x ./kubectl
+sudo mv ./kubectl /usr/local/bin/kubectl
+
+
+
+#### The commands you provided are used to download, make executable, 
+and move the kubectl binary into a directory in your system's PATH so that it can be executed from anywhere. Here's what each command does####
