@@ -18,5 +18,5 @@ sudo apt install docker-ce -y
 
 sudo chmod 777 /var/run/docker.sock
 
-#give admin previlege to ubuntu user in docker
+#give admin previlege to ubuntu user in docker and Apply the group changes by logging out and logging back in.
 sudo usermod -aG docker ubuntu
