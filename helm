@@ -1,0 +1,21 @@
+#!/bin/bash
+
+set -e
+
+# Update and install dependencies
+sudo apt-get update -y
+sudo apt-get install -y curl apt-transport-https gnupg lsb-release
+
+# Add the Helm GPG key
+curl https://baltocdn.com/helm/signing.asc | sudo gpg --dearmor -o /usr/share/keyrings/helm.gpg
+
+# Add the Helm repository to APT sources
+echo "deb [signed-by=/usr/share/keyrings/helm.gpg] https://baltocdn.com/helm/stable/debian/ all main" | \
+  sudo tee /etc/apt/sources.list.d/helm-stable-debian.list
+
+# Update and install Helm
+sudo apt-get update -y
+sudo apt-get install -y helm
+
+# Verify installation
+helm version
